@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             xmlns:local="clr-namespace:RasPiBtControl"
+             x:Class="RasPiBtControl.UI.LogIn">
+    <ContentPage.Content>
+        <StackLayout>
+
+            <Grid>
+                <StackLayout Padding="0" Margin="0" HorizontalOptions="FillAndExpand">
+                    <Frame HeightRequest="150" BackgroundColor="#042146" Padding="0" Margin="0">
+                        <Image Source="{local:ImageResource RasPiBtControl.UI.img.Freedom.jpeg}" Aspect="AspectFill" Margin="0"/>
+                    </Frame>
+                </StackLayout>
+                <StackLayout Padding="0" Margin="10,100,10,0" HorizontalOptions="FillAndExpand">
+                    <Frame  BackgroundColor="White" HeightRequest="500" HasShadow="True" Padding="0" Margin="0">
+
+                        <StackLayout>
+
+
+                            <StackLayout Margin="10">
+                                <Label Text="SIGN IN" TextColor="Black" HorizontalOptions="CenterAndExpand" FontAttributes="Bold"/>
+                            </StackLayout>
+
+                            <StackLayout Padding="0" Margin="15,10">
+
+                                <Frame BackgroundColor="Transparent" BorderColor="DarkGray" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="30">
+                                    <StackLayout Orientation="Horizontal">
+                                        <Frame BackgroundColor="SkyBlue" HeightRequest="40" WidthRequest="40" CornerRadius="30" Padding="0" Margin="5">
+                                            <Image Source="{local:ImageResource RasPiBtControl.UI.img.Icon.png}" Aspect="AspectFit" Margin="0" AnchorX="0.5" AnchorY="0.5"/>
+                                        </Frame>
+                                        <Entry x:Name ="userEntry" Placeholder="Username" TextColor="DarkGray" FontAttributes="None" HorizontalOptions="FillAndExpand" Margin="0,0,20,0"/>
+                                    </StackLayout>
+                                </Frame>
+
+                                <Frame BackgroundColor="Transparent" BorderColor="DarkGray" Margin="0,15,0,0" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="30">
+                                    <StackLayout Orientation="Horizontal">
+                                        <Frame BackgroundColor="SkyBlue" HeightRequest="40" WidthRequest="40" CornerRadius="30" Padding="0" Margin="5">
+                                            <Image Source="{local:ImageResource RasPiBtControl.UI.img.Lock.png}" Aspect="AspectFit" Margin="0"/>
+                                        </Frame>
+                                        <Entry x:Name ="passEntry" Placeholder="Password" TextColor="DarkGray" FontAttributes="None" HorizontalOptions="FillAndExpand" Margin="0,0,20,0"/>
+                                    </StackLayout>
+                                </Frame>
+
+                                <StackLayout  Orientation="Horizontal">
+                                    <CheckBox IsChecked="False" Color="#003F93" />
+                                    <Label Text="Remember me" TextColor="DarkGray" FontSize="Small" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" />
+                                    <Label Text="Forgot Password" TextColor="#003F93" FontAttributes="Bold" HorizontalOptions="EndAndExpand" FontSize="Small" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" />
+                                </StackLayout>
+                                <Button x:Name ="log"  Clicked="LogInClicked"  Text="SIGN IN" BackgroundColor="#042146" TextColor="White" CornerRadius="30" />
+                                <Button x:Name ="sign" Clicked="SignUpClicked" Text="Register" BackgroundColor="#042146" TextColor="White" CornerRadius="30" />
+                                <Label x:Name="resultLabel" HorizontalOptions="FillAndExpand"/>
+
+                            </StackLayout>
+                        </StackLayout>
+                    </Frame>
+                </StackLayout>
+            </Grid>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

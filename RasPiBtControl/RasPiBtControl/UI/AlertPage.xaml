@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="RasPiBtControl.UI.AlertPage">
+    <ContentPage.Content>
+        <StackLayout x:Name="stackLayout">
+            <Grid RowSpacing="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <StackLayout x:Name="stackLayout2" Grid.Row="0" HeightRequest="250" BackgroundColor="Black">
+                    <Label x:Name ="alertLabel" Text="ALERT"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" TextColor="White" FontAttributes="Bold" FontSize="Large" />
+                </StackLayout>
+            </Grid>
+            
+            <Label x:Name="Crashed" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" />
+            <Label x:Name="GyrosLabel" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" />
+            <ScrollView>
+            <Label x:Name="AOutput" HorizontalOptions="CenterAndExpand"/>
+            </ScrollView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

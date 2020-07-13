@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:RasPiBtControl"
+             x:Class="RasPiBtControl.UI.LandingPage"
+             Title="LandingPage"
+             x:Name="landingPage">
+  <ScrollView>
+    <StackLayout Padding="10">
+        <StackLayout Orientation="Horizontal">
+            <!--<Picker ItemsSource="{Binding PairedDevices}" SelectedItem="{Binding SelectedDevice, Mode=TwoWay}" Title="Select Device" HorizontalOptions="StartAndExpand" />-->
+                <Label Text="{Binding Message}" HorizontalOptions="StartAndExpand"/>
+                <Button Image="refresh" Command="{Binding Refresh}" HorizontalOptions="End"/>
+        </StackLayout>
+
+            <!--<ListView ItemsSource="{Binding Operations}" VerticalOptions="FillAndExpand" RowHeight="20">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>                        
+                        <Button Grid.Column="1" Text="{Binding}" Command="{Binding BindingContext.Execute, Source={x:Reference Name=landingPage}}" CommandParameter="{Binding}" />
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>-->
+          
+                <!--The map-->
+            <ContentView Content="{Binding Map}" HeightRequest="200"/>
+            <!--<ContentView Content="{Binding webvw}" HeightRequest="200"/>-->
+            <!--<WebView HeightRequest="1000" WidthRequest="1000" Source="https://www.google.com/maps" />-->
+            <!--<local:GeoWebView 
+                Source="https://www.google.com/maps"></local:GeoWebView>-->
+            <Button Text="Front Crash Alert" Command= "{Binding BindingContext.GoFrontAlert, Source={x:Reference Name=landingPage}}"/>
+            <Button Text="Rear Crash Alert" Command= "{Binding BindingContext.GoRearAlert, Source={x:Reference Name=landingPage}}"/>
+            <Button Text="Shutdown PI" Command= "{Binding BindingContext.Shutdown, Source={x:Reference Name=landingPage}}"/>
+            <Button Text="See Contacts" Command= "{Binding BindingContext.SeeContacts, Source={x:Reference Name=landingPage}}"/>
+            <Entry Text= "{Binding Speed}" Placeholder="Enter Speed" />
+            <Button Text="Send Speed" Command="{Binding BindingContext.SendSpeed, Source={x:Reference Name=landingPage}}" CommandParameter="{Binding Speed}" />
+
+        <Label Text="{Binding Message}" VerticalOptions="EndAndExpand" />
+            <Label Text="Speed in m/s:" VerticalOptions="EndAndExpand" />
+            <Label Text="{Binding Velocity}" VerticalOptions="EndAndExpand" />
+        
+        </StackLayout>
+  </ScrollView>
+</ContentPage>

@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="RasPiBtControl.UI.ViewContactPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Contact Details"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+            <Label x:Name="MessageLabel" VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+            <Label x:Name="nameLabel"/>
+            <Label x:Name="numberLabel"/>
+            <Button Text="Delete Contact" Clicked="DeleteContactClicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
